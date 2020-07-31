@@ -26,6 +26,7 @@ export const boardSlice = createSlice({
     //   state.completed = true;
     // },
     getAll: (state, action) => {
+      console.log('in getAll', action.payload);
       state.cards = action.payload;
     },
     assignUser: (state, action) => {
