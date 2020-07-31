@@ -28,14 +28,14 @@ const useStyles = makeStyles((theme) => ({
 const Canvas = ({ logout, loggedIn, username }) => {
   if (!loggedIn) return <Redirect to="/login" />;
 
-  useEffect(() => {
-    // fetch request for user table
-    fetch(`/server/boardState/${username}`)
-      .then((response) => response.json())
-      .then(({ username, current, cards }) =>
-        dispatch(newState({ username, current, cards }))
-      );
-  });
+  // useEffect(() => {
+  //   // // fetch request for user table
+  //   // fetch(`/server/boardState/${username}`)
+  //   //   .then((response) => response.json())
+  //   //   .then(({ username, current, cards }) =>
+  //   //     dispatch(newState({ username, current, cards }))
+  //   //   );
+  // });
 
   const { paper, heading } = useStyles();
 
